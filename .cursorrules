@@ -1,0 +1,52 @@
+# FinFlow - Reglas del Agente
+
+## Stack Tecnológica
+- **Frontend**: Next.js 14 con App Router, TypeScript, Tailwind CSS, Shadcn/ui
+- **Backend**: Firebase (Firestore, Auth, Hosting)
+- **Estado**: Zustand, React Query/TanStack Query
+- **Formularios**: React Hook Form + Zod
+- **Gráficos**: Recharts o Chart.js
+- **Herramientas**: Vite, ESLint, Prettier, Husky
+
+## Convenciones de Código
+- Usar TypeScript en todos los archivos
+- Seguir convenciones de Next.js 14 con App Router
+- Usar Tailwind CSS para estilos
+- Implementar componentes de Shadcn/ui cuando sea posible
+- Usar camelCase para variables y funciones
+- Usar PascalCase para componentes y tipos
+- Usar kebab-case para archivos y rutas
+
+## Estructura de Datos Firebase
+- Usar Firestore para almacenamiento en tiempo real
+- Estructura: usuarios/{userId}/{coleccion}/{documentId}
+- Colecciones principales: presupuestos, deudas, proyectos, transacciones
+- Implementar reglas de seguridad en Firestore
+
+## Funcionalidades Principales
+- Autenticación con Firebase Auth
+- Gestión de presupuestos con categorías
+- Sistema de deudas entre personas
+- Gestión de proyectos con gastos y colaboradores
+- Reportes y gráficos de gastos
+- Interfaz responsive y moderna
+
+## Prioridades de Desarrollo
+1. Configuración inicial del proyecto
+2. Autenticación de usuarios
+3. CRUD básico para presupuestos
+4. Sistema de deudas
+5. Gestión de proyectos
+6. Reportes y gráficos
+7. Optimizaciones y mejoras de UX
+
+## Consideraciones de Seguridad
+- Implementar reglas de Firestore apropiadas
+- Validar datos en frontend y backend
+- Usar variables de entorno para configuraciones sensibles
+- Implementar rate limiting donde sea necesario
+
+## Documentación
+- **SIEMPRE** actualizar el README.md cuando se agregue una nueva funcionalidad
+- Mantener la documentación sincronizada con el código
+- Incluir ejemplos de uso para nuevas características 
