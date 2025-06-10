@@ -11,6 +11,27 @@ Aplicación web para gestión de finanzas personales y de proyectos.
 - **Gráficos**: Recharts
 - **Herramientas**: Vite, ESLint, Prettier, Husky
 
+## 🛡️ Herramientas de Versionado y Calidad de Código
+
+Para asegurar un desarrollo profesional y colaborativo, este proyecto utiliza las siguientes herramientas:
+
+- **Husky**: Ejecuta hooks de Git para automatizar tareas antes de los commits y pushes.
+- **lint-staged**: Aplica linters y formateo solo a los archivos modificados antes de cada commit.
+- **Prettier**: Formatea el código automáticamente para mantener un estilo consistente.
+- **Commitlint**: Valida que los mensajes de commit sigan el estándar [Conventional Commits](https://www.conventionalcommits.org/).
+- **Conventional Commits**: Estructura los mensajes de commit para facilitar el versionado semántico y la generación de changelogs.
+
+### ¿Cómo funciona el flujo?
+
+1. **Antes de cada commit**:
+   - Se ejecuta ESLint y Prettier en los archivos modificados (lint-staged).
+   - Si hay errores de linting o formateo, el commit se cancela.
+2. **Al hacer commit**:
+   - Se valida el mensaje de commit (debe ser del tipo `feat:`, `fix:`, etc).
+   - Si el mensaje no cumple, el commit se cancela.
+
+> Consulta [CONTRIBUTING.md](./CONTRIBUTING.md) para ver ejemplos y convenciones de commits.
+
 ## 📋 Funcionalidades
 
 - ✅ Autenticación de usuarios
@@ -69,22 +90,27 @@ usuarios/{userId}/
 ## 🚀 Getting Started
 
 ### Prerrequisitos
-- Node.js 18+ 
+
+- Node.js 18+
 - npm o yarn
 
 ### Instalación
+
 1. Clonar el repositorio:
+
    ```bash
    git clone https://github.com/CanteroAgustin/finflow.git
    cd finflow
    ```
 
 2. Instalar dependencias:
+
    ```bash
    npm install
    ```
 
 3. Ejecutar en modo desarrollo:
+
    ```bash
    npm run dev
    ```
@@ -92,10 +118,14 @@ usuarios/{userId}/
 4. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador
 
 ### Scripts Disponibles
+
 - `npm run dev` - Servidor de desarrollo
 - `npm run build` - Build para producción
 - `npm run start` - Servidor de producción
 - `npm run lint` - Ejecutar ESLint
+- `npm run lint:fix` - Ejecutar ESLint con auto-fix
+- `npm run format` - Formatear código con Prettier
+- `npm run format:check` - Verificar formato sin cambiar
 
 ## 🎯 Estado Actual del Proyecto
 
@@ -104,7 +134,8 @@ usuarios/{userId}/
 ✅ **Tailwind CSS configurado**  
 ✅ **Página de inicio personalizada**  
 ✅ **Repositorio Git configurado**  
-⏳ **Próximo paso**: Configuración de Firebase  
+✅ **Herramientas de calidad y versionado configuradas**  
+⏳ **Próximo paso**: Configuración de Firebase
 
 ## 📝 Convenciones
 
