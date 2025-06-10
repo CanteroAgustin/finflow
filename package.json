@@ -10,7 +10,11 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "export": "next build",
+    "deploy": "npm run export && firebase deploy",
+    "deploy:hosting": "npm run export && firebase deploy --only hosting",
+    "deploy:firestore": "firebase deploy --only firestore"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -22,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "firebase": "^11.9.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -36,6 +41,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+    "firebase-tools": "^14.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
